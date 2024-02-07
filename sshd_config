@@ -1,0 +1,16 @@
+Subsystem sftp /usr/lib/openssh/sftp-server
+
+Match Group sftp
+PasswordAuthentication yes
+AllowTcpForwarding no
+X11Forwarding no
+ForceCommand internal-sftp
+
+Match User kpi
+ChrootDirectory /
+ForceCommand internal-sftp
+PasswordAuthentication yes
+PermitTunnel no
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
